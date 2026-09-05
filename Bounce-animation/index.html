@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce Animation</title>
+    <style>
+        .ball{
+            width: 121px;
+            height: 121px;
+            background-color: red;
+            border-radius: 72px;
+            position: absolute;
+            bottom: 0;
+            left: 0; 
+            animation: animateX 4s linear infinite, animateY .50s ease-out infinite alternate;
+            
+        }
+        .container{
+            position: relative;
+            height: 80vh;
+            width: 80vw;
+            background-color: blue;
+            border-radius: 10px;
+        }
+
+        @keyframes animateX {
+            from{
+                left: 0;
+            }
+            to{
+                left: calc(100% - 121px);
+            }
+        }
+        @keyframes animateY {
+            from{
+                bottom: 0;
+            }
+            to{
+                bottom: calc(100% - 121px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
